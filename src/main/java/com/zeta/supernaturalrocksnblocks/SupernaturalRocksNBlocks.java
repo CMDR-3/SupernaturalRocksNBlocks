@@ -1,6 +1,9 @@
 package com.zeta.supernaturalrocksnblocks;
 
 import com.mojang.logging.LogUtils;
+import com.zeta.supernaturalrocksnblocks.item.ModCreativeModTabs;
+import com.zeta.supernaturalrocksnblocks.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,13 +30,14 @@ public class SupernaturalRocksNBlocks
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
-
-        //  ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -44,6 +48,11 @@ public class SupernaturalRocksNBlocks
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+//        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
+//        {
+//            event.accept(ModItems.IRIDESCENCE);
+//        }
+
 
     }
 
