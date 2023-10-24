@@ -1,6 +1,7 @@
 package com.zeta.supernaturalrocksnblocks;
 
 import com.mojang.logging.LogUtils;
+import com.zeta.supernaturalrocksnblocks.block.ModBlocks;
 import com.zeta.supernaturalrocksnblocks.item.ModCreativeModTabs;
 import com.zeta.supernaturalrocksnblocks.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +32,7 @@ public class SupernaturalRocksNBlocks
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
