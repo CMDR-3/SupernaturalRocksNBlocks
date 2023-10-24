@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "supernaturalrocksnblocks:iridescence_block"
+    }
+  ],
+  "result":
+  {
+    "item": "supernaturalrocksnblocks:iridescence",
+    "count": 9
+  }
+}
